@@ -25,21 +25,20 @@ function App() {
       </header>
 
       <ul className="list-unstyled">
-        <div className="row">
+        <div className="row row-gap-3">
           {
             actresses.map((actress) => (
-              <div className="col-12 col-md-4">
+              <div className="column col-12 col-md-3">
                 <div className="card">
                   <li key={actress.id}>
                     <div className="image-container">
                       <img src={actress.image} className="card-img-top actress-image"/>
                     </div>
                     <div className="card-body">
-                      <p>{actress.name}</p>
-                      <p>{actress.birth_year}</p>
-                      <p>{actress.nationality}</p>
+                      <h6>{actress.name} - {actress.birth_year}</h6>
+                      <small>{actress.nationality}</small>
                       <p>{actress.biography}</p>
-                      <p>{actress.awards}</p>
+                      <p className="fst-italic">{actress.awards}</p>
                     </div>
                   </li>
                 </div>
