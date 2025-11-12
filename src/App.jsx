@@ -19,24 +19,28 @@ function App() {
   }, [])
 
   return (
-    <>
-      <h1>Booltiful</h1>
-      {/* <button onClick={handleClick}>Clicca</button> */}
-      <ul>
+    <div className="container">
+      <header className="text-center py-4">
+        <h1>Booltiful</h1>
+      </header>
+
+      <ul className="list-unstyled">
         {
           actresses.map((actress) => (
-            <li key={actress.id}>
-              <img src={actress.image}/>
-              <p>{actress.name}</p>
-              <p>{actress.birth_year}</p>
-              <p>{actress.nationality}</p>
-              <p>{actress.biography}</p>
-              <p>{actress.awards}</p>
-            </li>
+            <div className="card">
+              <li key={actress.id}>
+                <img src={actress.image}/>
+                <p>{actress.name}</p>
+                <p>{actress.birth_year}</p>
+                <p>{actress.nationality}</p>
+                <p>{actress.biography}</p>
+                <p>{actress.awards}</p>
+              </li>
+            </div>
           ))
         }
       </ul>
-    </>
+    </div>
   )
 }
 
