@@ -27,7 +27,7 @@ function App() {
         console.log(response.data);
         setActors(response.data);
       })
-  })
+  }, [])
 
   return (
     <div className="container">
