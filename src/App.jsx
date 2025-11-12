@@ -25,20 +25,28 @@ function App() {
       </header>
 
       <ul className="list-unstyled">
-        {
-          actresses.map((actress) => (
-            <div className="card">
-              <li key={actress.id}>
-                <img src={actress.image}/>
-                <p>{actress.name}</p>
-                <p>{actress.birth_year}</p>
-                <p>{actress.nationality}</p>
-                <p>{actress.biography}</p>
-                <p>{actress.awards}</p>
-              </li>
-            </div>
-          ))
-        }
+        <div className="row">
+          {
+            actresses.map((actress) => (
+              <div className="col-12 col-md-4">
+                <div className="card">
+                  <li key={actress.id}>
+                    <div className="image-container">
+                      <img src={actress.image} className="card-img-top actress-image"/>
+                    </div>
+                    <div className="card-body">
+                      <p>{actress.name}</p>
+                      <p>{actress.birth_year}</p>
+                      <p>{actress.nationality}</p>
+                      <p>{actress.biography}</p>
+                      <p>{actress.awards}</p>
+                    </div>
+                  </li>
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </ul>
     </div>
   )
